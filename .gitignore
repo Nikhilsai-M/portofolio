@@ -1,2 +1,5 @@
 node_modules/
 .env
+
+# The resume is hosted on Google Drive, not bundled with the site.
+/[Rr]esume*.pdf

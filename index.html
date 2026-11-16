@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miriyala Nikhil Sai - Portfolio</title>
+    <title>Nikhil Sai Miriyala | Full-Stack Developer</title>
+    <meta name="description" content="Nikhil Sai Miriyala, Computer Science student at IIIT Sri City, building full-stack applications, dependable backend systems, and practical AI products. Explore Smart Exchange, FinSight, and ContentForge.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -77,9 +78,7 @@
 
         /* Section reveal */
         .section {
-            scroll-margin-top: 5rem;
-            opacity: 0;
-            transform: translateY(40px);
+            scroll-margin-top: 8rem;
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
         .section.visible { opacity: 1; transform: translateY(0); }
@@ -326,11 +325,19 @@
             padding: 12px 20px;
             text-align: center;
         }
+
+        :focus-visible { outline: 3px solid #0ea5e9; outline-offset: 4px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .particles { display: none; }
+        }
     </style>
 </head>
 
 <body>
-    <div class="particles" id="particles">
+    <div class="particles" id="particles" aria-hidden="true">
         <div class="particle" style="left:8%;animation-delay:0s;animation-duration:28s"></div>
         <div class="particle" style="left:18%;animation-delay:3s;animation-duration:22s"></div>
         <div class="particle" style="left:28%;animation-delay:6s;animation-duration:26s"></div>
@@ -343,19 +350,19 @@
     </div>
 
     <!-- NAV -->
-    <nav class="fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-gradient text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
+    <nav class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+            <a href="#about" class="text-gradient text-lg font-bold tracking-tight hover:opacity-80 transition-opacity" aria-label="Nikhil Sai Miriyala, back to introduction">
                 Nikhil Sai.
             </a>
-            <ul class="hidden md:flex items-center space-x-8">
+            <ul class="order-last w-full flex flex-wrap justify-center items-center gap-x-5 gap-y-2 md:order-none md:w-auto md:gap-x-8">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <a href="Resume_v2.pdf" target="_blank" class="btn-primary text-sm hidden md:inline-block">Resume</a>
+            <a href="https://drive.google.com/file/d/1KUORblcrSF2TbFVZmZMT5-4QI-CUnGv8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm" aria-label="View resume on Google Drive (opens in a new tab)">Resume</a>
         </div>
     </nav>
 
@@ -365,21 +372,22 @@
         <section id="about" class="section container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center gap-12 md:gap-20">
             <div class="flex-shrink-0">
                 <div class="photo-frame">
-                    <img src="https://placehold.co/280x280/0f172a/0ea5e9?text=MNS" alt="Miriyala Nikhil Sai" class="rounded-full w-44 h-44 md:w-56 md:h-56 object-cover block">
+                    <div class="rounded-full w-44 h-44 md:w-56 md:h-56 flex items-center justify-center bg-slate-900 text-5xl md:text-6xl font-bold text-sky-400" aria-hidden="true">NSM</div>
                 </div>
             </div>
             <div class="text-center md:text-left max-w-2xl">
-                <span class="section-label mb-3 block">Hello, world</span>
+                <span class="section-label mb-3 block">IIIT Sri City &middot; Class of 2027</span>
                 <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4">
-                    Miriyala<br><span class="text-gradient">Nikhil Sai</span>
+                    Nikhil Sai<br><span class="text-gradient">Miriyala</span>
                 </h1>
                 <p class="text-slate-300 text-lg font-medium mb-4">CS Student &amp; Full-Stack Developer</p>
                 <p class="text-slate-400 leading-relaxed mb-8">
-                    B.Tech Computer Science student at IIIT Sri City with a strong interest in full-stack development, backend systems, and practical AI-powered applications. I enjoy building products that combine clean user experiences with dependable engineering.
+                    I build full-stack applications with React, Next.js, and Node.js, from an electronics marketplace to AI-powered finance and publishing tools. My work spans authentication, backend workflows, search, and caching, with a focus on useful features and dependable systems.
                 </p>
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
                     <a href="#contact" class="btn-primary">Get In Touch</a>
                     <a href="#projects" class="btn-ghost">View My Work</a>
+                    <a href="https://drive.google.com/file/d/1KUORblcrSF2TbFVZmZMT5-4QI-CUnGv8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost" aria-label="View resume on Google Drive (opens in a new tab)">View Resume</a>
                 </div>
             </div>
         </section>
@@ -391,13 +399,13 @@
             <div class="card p-8 space-y-8">
                 <!-- Entry 1 -->
                 <div class="flex flex-col sm:flex-row sm:items-start gap-4">
-                    <div class="sm:w-36 flex-shrink-0">
-                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2023 – Present</span>
+                    <div class="sm:w-48 flex-shrink-0">
+                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full inline-block">Aug 2023 &ndash; 2027 (Expected)</span>
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-bold text-slate-800 mb-1">B.Tech in Computer Science &amp; Engineering</h3>
                         <p class="text-slate-600 font-medium mb-1">Indian Institute of Information Technology, Sri City, AP</p>
-                        <p class="text-sm text-slate-500 mb-3">CGPA: <span class="font-semibold text-slate-700">8.64</span></p>
+                        <p class="text-sm text-slate-500 mb-3">CGPA: <span class="font-semibold text-slate-700">8.56 / 10</span></p>
                         <div class="space-y-2">
                             <div class="flex items-start gap-3 text-sm text-slate-600">
                                 <div class="timeline-dot mt-1"></div>
@@ -405,7 +413,7 @@
                             </div>
                             <div class="flex items-start gap-3 text-sm text-slate-600">
                                 <div class="timeline-dot mt-1"></div>
-                                <span>Core areas: Data Structures, Algorithms, DBMS, OOP.</span>
+                                <span>Core areas: Data Structures &amp; Algorithms, OOP, DBMS, and Operating Systems.</span>
                             </div>
                         </div>
                     </div>
@@ -413,8 +421,8 @@
                 <div class="divider" style="margin:0"></div>
                 <!-- Entry 2 -->
                 <div class="flex flex-col sm:flex-row sm:items-start gap-4">
-                    <div class="sm:w-36 flex-shrink-0">
-                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2021 – 2023</span>
+                    <div class="sm:w-48 flex-shrink-0">
+                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full inline-block">Jun 2021 &ndash; Jun 2023</span>
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-bold text-slate-800 mb-1">Intermediate – MPC</h3>
@@ -431,59 +439,59 @@
             <h2 class="text-3xl font-bold text-white mb-10">Skills</h2>
             <div class="card p-6 md:p-8">
                 <!-- Tab bar -->
-                <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-100 pb-4" id="skill-tabs">
-                    <button class="skill-tab active" data-tab="languages">Languages</button>
-                    <button class="skill-tab" data-tab="web">Web Tech</button>
-                    <button class="skill-tab" data-tab="ai">AI &amp; Data</button>
-                    <button class="skill-tab" data-tab="tools">Databases &amp; Tools</button>
-                    <button class="skill-tab" data-tab="core">Core Concepts</button>
-                    <button class="skill-tab" data-tab="soft">Soft Skills</button>
+                <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-100 pb-4" id="skill-tabs" role="group" aria-label="Skill categories">
+                    <button type="button" class="skill-tab active" data-tab="languages" aria-controls="panel-languages" aria-pressed="true">Languages</button>
+                    <button type="button" class="skill-tab" data-tab="frontend" aria-controls="panel-frontend" aria-pressed="false">Frontend</button>
+                    <button type="button" class="skill-tab" data-tab="backend" aria-controls="panel-backend" aria-pressed="false">Backend &amp; Services</button>
+                    <button type="button" class="skill-tab" data-tab="databases" aria-controls="panel-databases" aria-pressed="false">Databases &amp; Caching</button>
+                    <button type="button" class="skill-tab" data-tab="tools" aria-controls="panel-tools" aria-pressed="false">Tools &amp; Platforms</button>
+                    <button type="button" class="skill-tab" data-tab="core" aria-controls="panel-core" aria-pressed="false">Core CS</button>
                 </div>
                 <!-- Panels -->
                 <div class="skill-panel active flex-wrap gap-3" id="panel-languages">
+                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">C</span>
                     <span class="skill-tag">SQL</span>
                 </div>
-                <div class="skill-panel flex-wrap gap-3" id="panel-web">
-                    <span class="skill-tag">Next.js</span>
+                <div class="skill-panel flex-wrap gap-3" id="panel-frontend">
                     <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express.js</span>
-                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Next.js</span>
                     <span class="skill-tag">Tailwind CSS</span>
                     <span class="skill-tag">HTML5</span>
                 </div>
-                <div class="skill-panel flex-wrap gap-3" id="panel-ai">
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">Scikit-learn</span>
+                <div class="skill-panel flex-wrap gap-3" id="panel-backend">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">JWT Authentication</span>
+                    <span class="skill-tag">Clerk</span>
+                    <span class="skill-tag">Inngest</span>
+                    <span class="skill-tag">Convex</span>
+                    <span class="skill-tag">Gemini API</span>
+                    <span class="skill-tag">ImageKit</span>
                 </div>
-                <div class="skill-panel flex-wrap gap-3" id="panel-tools">
+                <div class="skill-panel flex-wrap gap-3" id="panel-databases">
+                    <span class="skill-tag">PostgreSQL</span>
                     <span class="skill-tag">MongoDB</span>
                     <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Prisma</span>
+                    <span class="skill-tag">Redis</span>
                     <span class="skill-tag">Supabase</span>
-                    <span class="skill-tag">Docker</span>
+                </div>
+                <div class="skill-panel flex-wrap gap-3" id="panel-tools">
                     <span class="skill-tag">Git</span>
                     <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Prisma</span>
+                    <span class="skill-tag">Vercel</span>
                 </div>
                 <div class="skill-panel flex-wrap gap-3" id="panel-core">
-                    <span class="skill-tag">Data Structures</span>
-                    <span class="skill-tag">Algorithms</span>
-                    <span class="skill-tag">DBMS</span>
+                    <span class="skill-tag">Data Structures &amp; Algorithms</span>
                     <span class="skill-tag">OOP</span>
-                </div>
-                <div class="skill-panel flex-wrap gap-3" id="panel-soft">
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Cross-functional Collaboration</span>
-                    <span class="skill-tag">Adaptability</span>
-                    <span class="skill-tag">Technical Communication</span>
+                    <span class="skill-tag">DBMS</span>
+                    <span class="skill-tag">Operating Systems</span>
                 </div>
             </div>
         </section>
@@ -499,7 +507,6 @@
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-bold text-slate-800">FinSight</h3>
-                            <p class="text-xs text-slate-500 mt-0.5">2026</p>
                         </div>
                         <span class="text-xs font-semibold text-teal-600 bg-teal-50 border border-teal-100 px-2.5 py-1 rounded-full">Finance</span>
                     </div>
@@ -509,24 +516,25 @@
                         <span class="tech-badge">Prisma</span>
                         <span class="tech-badge">Supabase</span>
                         <span class="tech-badge">Inngest</span>
+                        <span class="tech-badge">Gemini API</span>
                     </div>
                     <ul class="space-y-2.5 text-sm text-slate-600 mb-6 flex-1">
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Full-stack finance platform for accounts, budgets, and analytics dashboard.</span>
+                            <span>Built a full-stack platform with an interactive analytics dashboard for accounts, budgets, income, and expenses.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Gemini receipt scanning, recurring transactions, and automated monthly reports via Inngest.</span>
+                            <span>Integrated Gemini-powered receipt scanning to extract transaction details, with Inngest workflows for recurring transactions and monthly financial reports.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Secure auth and DB workflows using Clerk, Prisma, Supabase, and Arcjet.</span>
+                            <span>Secured user data with Clerk authentication, protected server-side actions, and Arcjet, using Prisma and Supabase for persistence.</span>
                         </li>
                     </ul>
                     <div class="flex gap-3 mt-auto">
-                        <a href="https://github.com/Nikhilsai-M/FinSight" target="_blank" class="btn-primary text-sm flex-1 text-center">GitHub</a>
-                        <a href="https://fin-sight-beige.vercel.app/" target="_blank" class="btn-outline text-sm flex-1 text-center">Live</a>
+                        <a href="https://github.com/Nikhilsai-M/FinSight" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm flex-1 text-center">GitHub</a>
+                        <a href="https://fin-sight-beige.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm flex-1 text-center">Live</a>
                     </div>
                 </div>
 
@@ -535,7 +543,6 @@
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-bold text-slate-800">Smart Exchange</h3>
-                            <p class="text-xs text-slate-500 mt-0.5">2026</p>
                         </div>
                         <span class="text-xs font-semibold text-sky-600 bg-sky-50 border border-sky-100 px-2.5 py-1 rounded-full">Marketplace</span>
                     </div>
@@ -543,6 +550,7 @@
                     <div class="flex flex-wrap gap-1.5 mb-4">
                         <span class="tech-badge">React.js</span>
                         <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Express.js</span>
                         <span class="tech-badge">MongoDB</span>
                         <span class="tech-badge">Redis</span>
                         <span class="tech-badge">Docker</span>
@@ -550,20 +558,20 @@
                     <ul class="space-y-2.5 text-sm text-slate-600 mb-6 flex-1">
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Full-stack marketplace for refurbished phones and laptops with cart and order management.</span>
+                            <span>Contributed to a team-built marketplace for refurbished phones, laptops, and accessories; owned authentication, device resale, product search, and caching.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>REST APIs for multi-role workflows: customers, sellers, supervisors, and admins.</span>
+                            <span>Implemented role-based JWT authentication with email OTP verification, plus the phone and laptop resale workflow from customer submission through supervisor verification.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Redis caching achieved 57.3% lower search latency and 90% cache hit ratio.</span>
+                            <span>Added Redis caching to product search, cutting median response time for repeated queries by approximately 49% across three 30-pair benchmark runs; containerized the app with Docker Compose.</span>
                         </li>
                     </ul>
                     <div class="flex gap-3 mt-auto">
-                        <a href="https://github.com/Nikhilsai-M/fdfed" target="_blank" class="btn-primary text-sm flex-1 text-center">GitHub</a>
-                        <a href="https://fdfed-mauve.vercel.app/" target="_blank" class="btn-outline text-sm flex-1 text-center">Live</a>
+                        <a href="https://github.com/Nikhilsai-M/fdfed" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm flex-1 text-center">GitHub</a>
+                        <a href="https://fdfed-mauve.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm flex-1 text-center">Live</a>
                     </div>
                 </div>
 
@@ -571,35 +579,37 @@
                 <div class="card project-card p-6 flex flex-col">
                     <div class="flex items-start justify-between mb-3">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-800">SecondBrain AI</h3>
-                            <p class="text-xs text-slate-500 mt-0.5">2026</p>
+                            <h3 class="text-lg font-bold text-slate-800">ContentForge</h3>
                         </div>
-                        <span class="text-xs font-semibold text-violet-600 bg-violet-50 border border-violet-100 px-2.5 py-1 rounded-full">SaaS</span>
+                        <span class="text-xs font-semibold text-violet-600 bg-violet-50 border border-violet-100 px-2.5 py-1 rounded-full">Publishing</span>
                     </div>
-                    <p class="text-sm text-slate-500 font-medium mb-3">Personal Knowledge Workspace</p>
+                    <p class="text-sm text-slate-500 font-medium mb-3">AI-Powered Creator Publishing Platform</p>
                     <div class="flex flex-wrap gap-1.5 mb-4">
                         <span class="tech-badge">Next.js</span>
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Supabase</span>
-                        <span class="tech-badge">Gemini</span>
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">Convex</span>
+                        <span class="tech-badge">Clerk</span>
+                        <span class="tech-badge">Gemini API</span>
+                        <span class="tech-badge">ImageKit</span>
+                        <span class="tech-badge">Tailwind CSS</span>
                     </div>
                     <ul class="space-y-2.5 text-sm text-slate-600 mb-6 flex-1">
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>SaaS AI knowledge workspace with rich-text notes, PDF uploads, and AI summaries.</span>
+                            <span>Built an AI-assisted platform where creators draft, edit, publish, and manage blog posts from a responsive dashboard.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Supabase Storage, private signed PDF access, and Prisma/PostgreSQL data models.</span>
+                            <span>Modeled posts, users, likes, comments, followers, and analytics in Convex, with Clerk authentication and public creator profiles.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <div class="timeline-dot flex-shrink-0 mt-1.5"></div>
-                            <span>Rate limiting, dark mode, and responsive UI deployed on Vercel.</span>
+                            <span>Integrated Gemini for AI content generation and ImageKit for authenticated image uploads, supporting rich posts and feed discovery.</span>
                         </li>
                     </ul>
                     <div class="flex gap-3 mt-auto">
-                        <a href="https://github.com/Nikhilsai-M/SecondBrainAi" target="_blank" class="btn-primary text-sm flex-1 text-center">GitHub</a>
-                        <a href="https://secon-brain-ai.vercel.app/" target="_blank" class="btn-outline text-sm flex-1 text-center">Live</a>
+                        <a href="https://github.com/Nikhilsai-M/Ai-content-creator" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm flex-1 text-center">GitHub</a>
+                        <a href="https://ai-content-creator-cyan.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm flex-1 text-center">Live</a>
                     </div>
                 </div>
 
@@ -625,22 +635,25 @@
         </section>
 
         <!-- ACHIEVEMENTS -->
-        <section class="section container mx-auto px-6 py-16">
+        <section id="achievements" class="section container mx-auto px-6 py-16">
             <span class="section-label block mb-2">Recognition</span>
             <h2 class="text-3xl font-bold text-white mb-10">Achievements &amp; Certifications</h2>
             <div class="card p-6 md:p-8 space-y-3">
                 <div class="achievement-item">
                     <div class="timeline-dot mt-1 flex-shrink-0"></div>
-                    <p class="text-sm text-slate-700 font-medium">Winner of <span class="font-bold text-slate-800">Ideaverse Hackathon 2026</span>.</p>
+                    <div>
+                        <p class="text-sm text-slate-700 font-medium mb-2">Winner, <span class="font-bold text-slate-800">IdeaVerse Hackathon 2026</span> at IIIT Sri City.</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Built a dual-mode itinerary planner for business and leisure that parses schedules and combines the Overpass API, OSRM routing, and Nominatim geocoding for route-aware, location-based recommendations.</p>
+                    </div>
                 </div>
                 <div class="achievement-item">
                     <div class="timeline-dot mt-1 flex-shrink-0"></div>
                     <div>
                         <p class="text-sm text-slate-700 font-medium mb-2">Competitive Programming ratings:</p>
                         <div class="flex flex-wrap gap-3">
-                            <div class="stat-chip"><p class="text-xs text-slate-500 mb-0.5">LeetCode</p><p class="text-sm font-bold text-slate-800">1705</p></div>
-                            <div class="stat-chip"><p class="text-xs text-slate-500 mb-0.5">CodeChef</p><p class="text-sm font-bold text-slate-800">1473</p></div>
-                            <div class="stat-chip"><p class="text-xs text-slate-500 mb-0.5">Codeforces</p><p class="text-sm font-bold text-slate-800">1015</p></div>
+                            <div class="stat-chip"><p class="text-xs text-slate-500 mb-0.5">LeetCode &middot; Knight</p><p class="text-sm font-bold text-slate-800">1934</p></div>
+                            <div class="stat-chip"><p class="text-xs text-slate-500 mb-0.5">CodeChef &middot; 2-star</p><p class="text-sm font-bold text-slate-800">1479</p></div>
+                            <div class="stat-chip"><p class="text-xs text-slate-500 mb-0.5">Codeforces &middot; Pupil</p><p class="text-sm font-bold text-slate-800">1214</p></div>
                         </div>
                     </div>
                 </div>
@@ -663,11 +676,11 @@
                 <div class="grid sm:grid-cols-2 gap-4">
                     <div class="achievement-item">
                         <div class="timeline-dot mt-1 flex-shrink-0"></div>
-                        <p class="text-sm text-slate-700">Interested in full-stack product development, practical AI applications, and backend system design.</p>
+                        <p class="text-sm text-slate-700">Building useful AI features, from receipt scanning and content generation to route-aware itinerary planning.</p>
                     </div>
                     <div class="achievement-item">
                         <div class="timeline-dot mt-1 flex-shrink-0"></div>
-                        <p class="text-sm text-slate-700">Active in hackathons, coding contests, and continuous learning through projects and certifications.</p>
+                        <p class="text-sm text-slate-700">Solving algorithmic problems, competing in hackathons, and improving backend performance through hands-on projects.</p>
                     </div>
                 </div>
             </div>
@@ -678,11 +691,11 @@
             <span class="section-label block mb-2">Let's Talk</span>
             <h2 class="text-3xl font-bold text-white mb-10">Contact &amp; Links</h2>
             <div class="card p-8 md:p-12 text-center">
-                <p class="text-slate-600 text-lg mb-2">Open to internships, collaborations, and product discussions.</p>
+                <p class="text-slate-600 text-lg mb-2">Let's talk about software engineering opportunities, full-stack projects, or practical AI products.</p>
                 <div class="flex flex-wrap justify-center gap-6 text-slate-600 mb-8 mt-4">
-                    <a href="mailto:nikhilsai.m23@iiits.in" class="flex items-center gap-2 hover:text-sky-600 transition-colors font-medium text-sm">
+                    <a id="contact-email" href="mailto:nikhilsai1319@gmail.com" class="flex items-center gap-2 hover:text-sky-600 transition-colors font-medium text-sm">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        nikhilsai.m23@iiits.in
+                        nikhilsai1319@gmail.com
                     </a>
                     <a href="tel:+916300141770" class="flex items-center gap-2 hover:text-sky-600 transition-colors font-medium text-sm">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.21a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.43a16 16 0 006.29 6.29l1.3-1.3a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
@@ -690,14 +703,14 @@
                     </a>
                 </div>
                 <div class="flex flex-wrap justify-center gap-4 mb-10">
-                    <button id="copy-email-btn" class="btn-primary">Copy Email</button>
-                    <a href="Resume_v2.pdf" target="_blank" class="btn-outline" style="border-color:#0ea5e9;color:#0ea5e9">View Resume</a>
+                    <button type="button" id="copy-email-btn" class="btn-primary" aria-live="polite">Copy Email</button>
+                    <a href="https://drive.google.com/file/d/1KUORblcrSF2TbFVZmZMT5-4QI-CUnGv8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-outline" style="border-color:#0ea5e9;color:#0ea5e9" aria-label="View resume on Google Drive (opens in a new tab)">View Resume</a>
                 </div>
                 <div class="flex justify-center gap-4">
-                    <a href="https://www.linkedin.com/in/nikhil-sai-miriyala-32176b291/" target="_blank" class="social-icon" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/nikhil-sai-miriyala-32176b291/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.762s.784-1.76 1.75-1.76 1.75.79 1.75 1.76-.783 1.762-1.75 1.762zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    <a href="https://github.com/Nikhilsai-M/" target="_blank" class="social-icon" title="GitHub">
+                    <a href="https://github.com/Nikhilsai-M/" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.373 3.43 9.356 8.204 10.435.6.111.828-.261.828-.577v-2.008c-3.338.724-4.043-1.611-4.043-1.611-.546-1.385-1.332-1.75-1.332-1.75-1.09-.744.081-.729.081-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.491.996.108-.775.418-1.305.762-1.605-2.665-.304-5.466-1.334-5.466-5.931 0-1.312.469-2.38.828-3.224-.135-.304-.361-1.523.085-3.18 0 0 1.09-.325 3.564 1.23.953-.266 1.966-.399 2.979-.399 1.013 0 2.027.133 2.98.4 2.473-1.556 3.563-1.23 3.563-1.23.447 1.657.22 2.876.085 3.18.351.844.82 1.912.82 3.224 0 4.587-2.806 5.624-5.471 5.923.43.37.823 1.102.823 2.222v3.292c0 .319.227.69.836.574 4.772-1.079 8.2-5.064 8.2-10.435 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
                 </div>
@@ -707,7 +720,7 @@
 
     <footer style="background:rgba(0,0,0,0.3);border-top:1px solid rgba(255,255,255,0.06)" class="relative z-10 py-8 text-center">
         <div class="container mx-auto px-6">
-            <p class="text-slate-500 text-sm mb-4">&copy; 2026 Miriyala Nikhil Sai. All rights reserved.</p>
+            <p class="text-slate-500 text-sm mb-4">&copy; 2026 Nikhil Sai Miriyala. All rights reserved.</p>
             <div class="flex justify-center gap-6">
                 <a href="#about" class="text-slate-500 text-sm hover:text-slate-300 transition-colors">About</a>
                 <a href="#projects" class="text-slate-500 text-sm hover:text-slate-300 transition-colors">Projects</a>
@@ -725,7 +738,7 @@
                 const target = document.querySelector(link.getAttribute('href'));
                 if (target) {
                     e.preventDefault();
-                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
                 }
             });
         });
@@ -740,9 +753,13 @@
         document.getElementById('skill-tabs').addEventListener('click', e => {
             const tab = e.target.closest('.skill-tab');
             if (!tab) return;
-            document.querySelectorAll('.skill-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.skill-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-pressed', 'false');
+            });
             document.querySelectorAll('.skill-panel').forEach(p => p.classList.remove('active'));
             tab.classList.add('active');
+            tab.setAttribute('aria-pressed', 'true');
             document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
         });
 
@@ -765,13 +782,29 @@
 
         // Copy email
         const emailBtn = document.getElementById('copy-email-btn');
-        const email = 'nikhilsai.m23@iiits.in';
+        const email = document.getElementById('contact-email').getAttribute('href').replace('mailto:', '');
         emailBtn.addEventListener('click', async () => {
-            try { await navigator.clipboard.writeText(email); }
-            catch { const i = document.createElement('input'); i.value = email; document.body.appendChild(i); i.select(); document.execCommand('copy'); document.body.removeChild(i); }
-            const orig = emailBtn.textContent;
-            emailBtn.textContent = 'Copied!';
-            setTimeout(() => emailBtn.textContent = orig, 2000);
+            emailBtn.disabled = true;
+            let copied = false;
+            try {
+                await navigator.clipboard.writeText(email);
+                copied = true;
+            } catch {
+                const input = document.createElement('input');
+                input.value = email;
+                input.style.position = 'fixed';
+                input.style.opacity = '0';
+                document.body.appendChild(input);
+                input.select();
+                try { copied = document.execCommand('copy'); }
+                catch { copied = false; }
+                finally { input.remove(); }
+            }
+            emailBtn.textContent = copied ? 'Copied!' : 'Please use the email link';
+            setTimeout(() => {
+                emailBtn.textContent = 'Copy Email';
+                emailBtn.disabled = false;
+            }, 2000);
         });
 
         // Particle generator
@@ -784,7 +817,9 @@
             document.getElementById('particles').appendChild(p);
             setTimeout(() => p.remove(), 32000);
         }
-        setInterval(spawnParticle, 4000);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            setInterval(spawnParticle, 4000);
+        }
 
     });
     </script>
