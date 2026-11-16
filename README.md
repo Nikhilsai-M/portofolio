@@ -1,15 +1,13 @@
-# Nikhil Sai Miriyala — Portfolio
+# Nikhil Sai Miriyala | Portfolio
 
-Personal portfolio built with HTML, Tailwind CSS, and JavaScript.
+My personal portfolio website. I'm a Computer Science student at IIIT Sri City, and this site brings together my projects, skills, education, and contact details.
 
-[Portfolio](https://nikhilsai-m.github.io/portofolio/) · [Current resume on Google Drive](https://drive.google.com/file/d/1KUORblcrSF2TbFVZmZMT5-4QI-CUnGv8/view?usp=sharing)
+[Live site](https://nikhilsai-m.github.io/portofolio/) · [Resume](https://drive.google.com/file/d/1KUORblcrSF2TbFVZmZMT5-4QI-CUnGv8/view?usp=sharing)
 
-The portfolio content reflects the latest resume: education, technical skills, Smart Exchange, FinSight, ContentForge, achievements, and contact details.
+## Built with
 
-## Resume updates
+HTML, Tailwind CSS, and JavaScript. Hosted on GitHub Pages.
 
-Every resume button opens the Google Drive viewer. No resume PDF is stored or served from this repository. Replace the file's contents in Drive while keeping its file ID to keep the same portfolio links working. If the Drive file ID changes, update all resume URLs in `index.html` and this README.
+## Running locally
 
-## Local preview
-
-Open `index.html` in a browser, or serve this directory with `python -m http.server 8000` and visit `http://localhost:8000`. Tailwind CSS and the Inter font load from their CDNs.
+Clone the repo and open `index.html` in your browser. No installation or build step needed.
